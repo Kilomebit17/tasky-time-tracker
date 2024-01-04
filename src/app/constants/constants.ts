@@ -1,0 +1,1 @@
+export const DefaultIcon = '/assets/icons/default-icon.png'
