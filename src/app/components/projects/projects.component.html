@@ -1,0 +1,17 @@
+<div class="projects-list">
+    <div class="title">Projects</div>
+    <div class="projects-data">
+        <div class="project" *ngFor="let project of projectsData">
+            <div class="project-name">
+                <img src="/assets/icons/project-image.png" alt="">
+                <div class="project-title">{{project.title}}</div>
+            </div>
+            <div class="project-info">
+                <div class="project-time">{{project.time}}</div>
+                <div class="project-progress-bar">
+                    <div class="project-progress-line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

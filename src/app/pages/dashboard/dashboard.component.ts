@@ -4,11 +4,12 @@ import { MainTimerButtonComponent } from "../../components/main-timer-button/mai
 import { ActivitiesCardComponent } from "../../components/activities-card/activities-card.component";
 import { ActivitiesData } from "./dashboard.mock";
 import { Activities } from "./dashboard.interface";
+import { ProjectsComponent } from "../../components/projects/projects.component";
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule,MainTimerButtonComponent,ActivitiesCardComponent],
+  imports: [CommonModule,MainTimerButtonComponent,ActivitiesCardComponent,ProjectsComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
