@@ -1,0 +1,26 @@
+.item {
+    border-radius: 34px;
+    background: #FFF;
+    box-shadow: 0px 16px 31px 0px rgba(0, 0, 0, 0.01);
+    padding: 38px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 450px;
+    gap: 50px;
+    .title {
+        font-size: 28px;
+        font-weight: 500;
+        color: #000;
+    }
+    .image {
+        img {
+            cursor: pointer;
+        }
+    }
+    .timer {
+        font-size: 28px;
+        font-weight: 500;
+        color: #000;
+    }
+}

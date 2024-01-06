@@ -1,0 +1,9 @@
+<div class="item">
+    <div class="title" *ngIf="!isLaunched; else timer">Start Time Tracker</div>
+    <div class="image" (click)="handleTimer()">
+        <img [src]="getTimerImage()" alt="image"> 
+    </div>
+    <ng-template #timer>
+        <div class="timer">{{ hours | number:'2.0' }}:{{ minutes | number:'2.0' }}:{{ seconds | number:'2.0' }}</div>
+    </ng-template>
+</div>

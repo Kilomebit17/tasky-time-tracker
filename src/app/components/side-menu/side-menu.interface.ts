@@ -1,4 +1,4 @@
-import { MenuI } from "./header.interface";
+import { MenuI } from "./side-menu.mock";
 
 export enum Routes {
     dashboard = 'dashboard',

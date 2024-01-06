@@ -1,11 +1,3 @@
 <div class="header">
     <div class="logo">task<font color='#FABB18'>y.</font></div>
-    <div class="menu">
-        <div class="item"*ngFor="let item of menu" [ngClass]="{'active': item.route === activeRoute}" (click)="onMenuNavigate(item.route)">
-            <div class="item-wrapper">
-                <img [src]="getMenuIcon(item.route,item.icon,item.iconActive)" alt="alt">
-                <div class="title">{{item.name}}</div>
-            </div>
-        </div>
-    </div>
 </div>
