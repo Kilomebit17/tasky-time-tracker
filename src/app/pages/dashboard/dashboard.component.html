@@ -1,3 +1,13 @@
 <div class="dashboard">
-    <main-timer-button></main-timer-button>
+    <div class="dashboard--head-wrapper">
+        <div class="dashboard--info">
+            <div class="dashboard--title">Today</div>
+            <div class="dateboard--date">
+                {{getDate | date: 'EE, d, y | h:mm a' }}
+            </div>
+        </div>
+        <div class="main-timer-btn">
+            <main-timer-button></main-timer-button>
+        </div>
+    </div>
 </div>

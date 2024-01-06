@@ -1,7 +1,27 @@
 .dashboard {
-    width: 100vw;
+    width: calc(100vw - 267px);
     height: 100vh;
     background-color: #F9F9F9;
     padding: 20px;
     border-radius: 18px;
+    &--head-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 67px - 20px;
+    }
+    &--info {
+        margin-left: 43px - 20px;
+    }
+    &--title {
+        font-size: 54px;
+        color: #000;
+        font-weight: 500;
+    }
+    &--date {
+        font-size: 28px;
+        color: #000;
+        font-weight: 400;
+        margin-top: 5px;
+    }
 }

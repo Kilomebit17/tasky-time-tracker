@@ -10,5 +10,7 @@ import { MainTimerButtonComponent } from "../../components/main-timer-button/mai
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
-
+  public get getDate() {
+    return new Date()
+  }
 }
