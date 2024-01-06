@@ -12,11 +12,14 @@ import { Subscription, interval } from "rxjs";
 })
 export class MainTimerButtonComponent implements OnDestroy{
   public isLaunched = false;
-  
+
   public hours: number = 0;
   public minutes: number = 0;
   public seconds: number = 0;
+constructor() {
+  
 
+}
   private subscription: Subscription | undefined;
   public handleTimer() {
     this.isLaunched = !this.isLaunched;
@@ -55,6 +58,19 @@ export class MainTimerButtonComponent implements OnDestroy{
     this.seconds = 0;
     this.minutes = 0;
     this.hours = 0;
+  }
+  private calcDifferenceTime() {
+    let currentTime:any = new Date();
+
+    let anotherTime:any = new Date('2024-01-06T18:30:21');
+
+    let difference = currentTime - anotherTime;
+
+    let hours = Math.floor(difference / 3600000); // 1 hour = 3600000 milliseconds
+    let minutes = Math.floor((difference % 3600000) / 60000); // 1 minute = 60000 milliseconds
+    let seconds = Math.floor((difference % 60000) / 1000); // 1 second = 1000 milliseconds
+    // Output the result
+    console.log("Difference is: " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds.");
   }
 
 }

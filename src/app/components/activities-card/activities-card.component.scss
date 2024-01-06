@@ -1,0 +1,32 @@
+.activities-card {
+    border-radius: 34px;
+    background: #FFF;
+    box-shadow: 0px 16px 31px 0px rgba(0, 0, 0, 0.01);
+    padding: 34px 36px;
+    width: 470px;
+
+    &--title {
+        color: #000;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &--info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 45px;
+    }
+
+    &--info-data {
+        color: #000;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    // &--info-picture {}
+}

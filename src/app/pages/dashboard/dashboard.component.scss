@@ -24,4 +24,10 @@
         font-weight: 400;
         margin-top: 5px;
     }
+    &--activities {
+        margin-top: 75px;
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
 }
