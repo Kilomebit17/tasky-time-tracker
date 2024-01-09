@@ -1,9 +1,9 @@
 import { MenuI } from "./side-menu.mock";
 
 export enum Routes {
-    dashboard = 'dashboard',
-    analytic = 'analytic',
-    timesheets = 'timesheets',
+    dashboard = '/dashboard',
+    analytic = '/analytic',
+    timesheets = '/timesheets',
 }
 export const MENU:MenuI[] = [
     {name:'Dashboard',route:`${Routes.dashboard}`,icon:'/assets/icons/header-menu/dashboard-icon.png',iconActive:'/assets/icons/header-menu/dashborad-icon-active.png'},
