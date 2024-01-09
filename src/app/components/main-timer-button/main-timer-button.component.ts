@@ -1,7 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { Component, OnDestroy } from '@angular/core';
-import { pauseTimerImage, playTimerImage } from "./main-timer.mock";
 import { Subscription, interval } from "rxjs";
+import { pauseTimerImage, playTimerImage } from "../../constants/constants";
 
 @Component({
   selector: 'main-timer-button',
@@ -39,8 +39,11 @@ constructor() {
       this.updateTime();
     });
   }
-  ngOnDestroy(): void {
+  private stopTimer() {
     this.subscription?.unsubscribe()
+    this.seconds = 0;
+    this.minutes = 0;
+    this.hours = 0;
   }
   private updateTime() {
     this.seconds++;
@@ -53,12 +56,7 @@ constructor() {
       this.hours++;
     }
   }
-  private stopTimer() {
-    this.subscription?.unsubscribe()
-    this.seconds = 0;
-    this.minutes = 0;
-    this.hours = 0;
-  }
+  
   private calcDifferenceTime() {
     let currentTime:any = new Date();
 
@@ -71,6 +69,9 @@ constructor() {
     let seconds = Math.floor((difference % 60000) / 1000); // 1 second = 1000 milliseconds
     // Output the result
     console.log("Difference is: " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds.");
+  }
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe()
   }
 
 }
