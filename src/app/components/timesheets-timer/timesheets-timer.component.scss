@@ -1,23 +1,27 @@
 .timesheets-timer {
     &--task {
         position: relative;
+
         input {
             color: #626262;
             font-size: 20px;
             border: none;
             outline: none;
         }
+
         &::before {
             content: '';
             position: absolute;
             left: -10px;
-            top:-3px;
+            top: 50%;
+            transform: translateY(-50%);
 
             height: 34px;
             width: 3px;
             background-color: #FABB18;
             border-radius: 6px;
         }
+
         &__error {
             color: rgb(207, 2, 2);
             font-size: 14px;
@@ -25,22 +29,26 @@
             transform: translateY(5px);
         }
     }
+
     &--wrapper {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
+
     &--time {
         display: flex;
         align-items: center;
         gap: 22px;
     }
+
     &--info {
         color: #888888;
         font-size: 20px;
         font-weight: 500;
     }
+
     &--button {
         cursor: pointer;
     }

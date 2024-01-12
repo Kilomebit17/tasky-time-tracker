@@ -1,3 +1,6 @@
 .timesheets {
     width: calc(100vw - 267px);
+    &--info {
+        margin-top:40px;
+    }
 }

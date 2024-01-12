@@ -2,6 +2,7 @@ import { Component, EventEmitter } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import { Custom, pauseTimer, startTimer, taskLabel } from "../../constants/constants";
 import { Subscription, interval } from "rxjs";
+import { TimesheetsInfoComponent } from "../timesheets-info/timesheets-info.component";
 
 @Component({
   selector: 'timesheets-timer',

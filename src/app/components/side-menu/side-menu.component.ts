@@ -3,7 +3,7 @@ import { Custom, DefaultIcon } from "../../constants/constants";
 import { NavigationEnd, Router } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { MayString, MenuI } from "./side-menu.mock";
-import { MENU } from "./side-menu.interface";
+import { MENU, Routes } from "./side-menu.interface";
 import { filter } from "rxjs";
 
 @Component({
@@ -24,7 +24,7 @@ export class SideMenuComponent {
       .pipe(
         filter(event => event instanceof NavigationEnd)
       ).subscribe((event: Custom) => {
-        this.activeRoute = event.url as string;
+        this.activeRoute = event?.url !== '/' ? event?.url : Routes.dashboard as string;
       })
   }
 
