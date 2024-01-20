@@ -1,9 +1,6 @@
 <div class="timesheets-info">
     <div class="info-title">{{title}}</div>
     <div class="info-info">
-        <div class="info-time">{{time}}</div>
-        <div class="info-time-progress-bar">
-            <div class="info-time-progress-line"></div>
-        </div>
+        <div class="info-time">{{ time?.hours | number:'2.0' }}:{{ time?.minutes | number:'2.0' }}:{{ time?.seconds | number:'2.0' }}</div>
     </div>
 </div>

@@ -1,8 +1,9 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import { Custom, pauseTimer, startTimer, taskLabel } from "../../constants/constants";
 import { Subscription, interval } from "rxjs";
 import { TimesheetsInfoComponent } from "../timesheets-info/timesheets-info.component";
+import { TimeSheetsEmitData } from "./timesheets-timer.interface";
 
 @Component({
   selector: 'timesheets-timer',
@@ -16,43 +17,44 @@ export class TimesheetsTimerComponent {
   public hours: number = 0;
   public minutes: number = 0;
   public seconds: number = 0;
-  public taskPlaceholder:string = taskLabel;
-  public task:string = '';
+  public taskPlaceholder: string = taskLabel;
+  public task: string = '';
   public isError = false;
-  private subscription:Subscription = new Subscription()
-  public emitter = new EventEmitter<any>()
-  private emitData = {
-    task:'',
-    timerStart:'',
-    timerEnd:'',
+  private subscription: Subscription = new Subscription()
+  @Output() emitter = new EventEmitter<TimeSheetsEmitData>()
+  private emitData: TimeSheetsEmitData = {
+    task: '',
+    startTime: new Date(),
+    endTime: new Date(),
   }
-  
+
   public handleTimerEvent() {
-    if(!this.isValided()) return;
+    if (!this.isValided()) return;
 
     this.isTimerLaunched = !this.isTimerLaunched
-    if(this.isTimerLaunched) {
+    if (this.isTimerLaunched) {
       this.startTimer()
     }
-    if(!this.isTimerLaunched) {
+    if (!this.isTimerLaunched) {
       this.stopTimer()
     }
   }
   public getTimerImage() {
-    return this.isTimerLaunched ? pauseTimer  : startTimer
+    return this.isTimerLaunched ? pauseTimer : startTimer
   }
-  public inputEvent({value}:Custom) {
+  public inputEvent({ value }: Custom) {
     this.task = value as string;
-    this.isError = false; 
+    this.isError = false;
   }
   private startTimer() {
+    this.emitData.startTime = new Date();
     this.subscription = interval(1000).subscribe((value) => {
       this.updateTime();
     });
   }
-  private isValided() {  
+  private isValided() {
     let isValided = true
-    if(this.task === '' && this.isTimerLaunched) {
+    if (this.task === '' && this.isTimerLaunched) {
       isValided = false;
       this.isError = true;
       return;
@@ -60,16 +62,22 @@ export class TimesheetsTimerComponent {
     return isValided
   }
   private stopTimer() {
-    if(!this.isValided()) {
+    if (!this.isValided()) {
       this.isError = true;
       return
     };
-    if(this.task !== '') {
+    if (this.task !== '') {
       this.subscription?.unsubscribe()
       this.seconds = 0;
       this.minutes = 0;
       this.hours = 0;
 
+      this.emitData = {
+        ...this.emitData,
+        endTime: new Date(),
+        task: this.task
+      }
+      this.task = '';
       this.emitter.emit(this.emitData);
     }
   }

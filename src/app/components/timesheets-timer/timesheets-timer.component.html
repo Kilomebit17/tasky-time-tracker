@@ -1,7 +1,7 @@
 <div class="timesheets-timer">
     <div class="timesheets-timer--wrapper">
         <div class="timesheets-timer--task">
-            <input (input)="inputEvent($event.target)"  [placeholder]="taskPlaceholder" type="text" >
+            <input (input)="inputEvent($event.target)" [value]="task" [placeholder]="taskPlaceholder" type="text" >
         </div>
         <div class="timesheets-timer--time">
             <div class="timesheets-timer--info">{{ hours | number:'2.0' }}:{{ minutes | number:'2.0' }}:{{ seconds | number:'2.0' }}</div>

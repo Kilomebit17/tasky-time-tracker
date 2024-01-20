@@ -1,6 +1,16 @@
 <div class="timesheets">
-    <timesheets-timer></timesheets-timer>
+    <timesheets-timer (emitter)="onHandleTimerData($event)"></timesheets-timer>
     <div class="timesheets--info">
-        <timesheets-info title="Some task" time="04:22:54"></timesheets-info>
+        <div class="timesheets--info__label">
+            <div class="timesheets--info__date">
+                {{timeService.getDate | date: 'EEEE, d' }}
+            </div>
+            <div class="info-time-progress-bar">
+                <div class="info-time-progress-line"></div>
+            </div>
+        </div>
+        <div class="timesheets--info-data">
+            <timesheets-info *ngFor="let item of timeData" [title]="item.task" [time]="item.time"></timesheets-info>
+        </div>
     </div>
 </div>

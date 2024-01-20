@@ -1,6 +1,40 @@
 .timesheets {
     width: calc(100vw - 267px);
+
     &--info {
-        margin-top:40px;
+        margin-top: 40px;
+
+        &__date {
+            font-size: 18px;
+            color: #000;
+            font-weight: 400;
+            margin: 5px 10px;
+        }
+
+        &__label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .info-time-progress-bar {
+                margin-right: 10px;
+                width: 188px;
+                height: 3px;
+                border-radius: 10px;
+                background: #DFDFDF;
+
+                .info-time-progress-line {
+                    width: 160px;
+                    height: 3px;
+                    border-radius: 10px;
+                    background: #FABB18;
+                }
+            }
+        }
+    }
+    &--info-data {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
     }
 }
