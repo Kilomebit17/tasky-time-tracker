@@ -1,5 +1,7 @@
 .header {
     padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
     .logo {
         text-transform: uppercase;
         font-size: 36px;

@@ -1,0 +1,3 @@
+<div [ngClass]="{'avatar-skeleton': !avatar}">
+    <img *ngIf="avatar" [src]="avatar" alt="user-picture" class="user-avatar">
+</div>
