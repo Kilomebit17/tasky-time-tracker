@@ -6,11 +6,12 @@ import { TimeService } from '../../modules/service/time.service';
 import { TimeSheetsEmitData } from '../../components/timesheets-timer/timesheets-timer.interface';
 import { TaskyHttpService } from '../../modules/service/tasky-http.service';
 import { Tasks } from '../../modules/interfaces/tasky.interface';
+import { TimeProgressBarComponent } from "../../components/time-progress-bar/time-progress-bar.component";
 
 @Component({
   selector: 'app-timesheets',
   standalone: true,
-  imports: [CommonModule, TimesheetsTimerComponent, TimesheetsInfoComponent],
+  imports: [CommonModule, TimesheetsTimerComponent, TimesheetsInfoComponent,TimeProgressBarComponent],
   templateUrl: './timesheets.component.html',
   styleUrl: './timesheets.component.scss',
   providers: [TimeService, TaskyHttpService],

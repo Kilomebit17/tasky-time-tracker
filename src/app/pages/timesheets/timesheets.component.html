@@ -5,9 +5,7 @@
             <div class="timesheets--info__date">
                 {{item.timestamp | date: 'EEEE, d' }}
             </div>
-            <div class="info-time-progress-bar">
-                <div class="info-time-progress-line"></div>
-            </div>
+            <time-progress-bar [total]="item.totalTime"></time-progress-bar>
         </div>
         <div class="timesheets--info-data" >
             <timesheets-info *ngFor="let task of item.tasks" [title]="task.task.title" [time]="task.task.time"></timesheets-info>

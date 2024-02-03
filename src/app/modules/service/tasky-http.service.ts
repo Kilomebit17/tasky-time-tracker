@@ -9,7 +9,7 @@ import { Custom } from '../../constants/constants';
 @Injectable()
 export class TaskyHttpService {
   constructor(private http: HttpClient, private timeService: TimeService) {}
-
+  //TODO add new types
   getAllTasks(): Observable<Tasks[]> {
     return this.http.get(`${environment.API_URL}task/list`).pipe(
       map((response: Custom) => {
@@ -27,9 +27,11 @@ export class TaskyHttpService {
   private parseTaskResponse(tasks: Task): any {
     //TODO Write parse service
     return Object.entries(tasks).map(([key, value]) => {
+      const tasks = this.parseTask(value)
       return {
         timestamp: new Date(key),
-        tasks: this.parseTask(value),
+        tasks,
+        totalTime:this.timeService.calcTotalTime(tasks)
       };
     });
   }

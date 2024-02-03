@@ -1,0 +1,14 @@
+@import '../../../resize.scss';
+.info-time-progress-bar {
+    margin-right: desktop(10);
+    width: desktop(188);
+    height: desktop(3);
+    border-radius: desktop(10);
+    background: #dfdfdf;
+
+    .info-time-progress-line {
+      height: desktop(3);
+      border-radius: desktop(10);
+      background: #fabb18;
+    }
+  }

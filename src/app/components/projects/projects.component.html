@@ -8,9 +8,7 @@
             </div>
             <div class="project-info">
                 <div class="project-time">{{project.time}}</div>
-                <div class="project-progress-bar">
-                    <div class="project-progress-line"></div>
-                </div>
+                <time-progress-bar [total]="project.timeTotal"></time-progress-bar>
             </div>
         </div>
     </div>
