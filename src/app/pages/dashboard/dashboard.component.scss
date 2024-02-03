@@ -1,36 +1,37 @@
+@import '../../../resize.scss';
 .dashboard {
-    width: calc(100vw - 267px);
+    width: calc(100vw - desktop(267));
     height: 100vh;
     background-color: #F9F9F9;
-    padding: 20px;
-    border-radius: 18px;
+    border-radius: desktop(18);
+    padding: desktop(20);
     &--head-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 67px - 20px;
+        margin-top: desktop(67) - desktop(20);
     }
     &--info {
-        margin-left: 43px - 20px;
+        margin-left: desktop(43) - desktop(20);
     }
     &--title {
-        font-size: 54px;
+        font-size: desktop(54);
         color: #000;
         font-weight: 500;
     }
     &--date {
-        font-size: 28px;
+        font-size: desktop(28);
         color: #000;
         font-weight: 400;
-        margin-top: 5px;
+        margin-top: desktop(5);
     }
     &--activities {
-        margin-top: 40px;
+        margin-top: desktop(40);
         display: flex;
         align-items: center;
-        gap: 35px;
+        gap: desktop(35);
     }
     &--projects {
-        margin-top: 40px;
+        margin-top: desktop(40);
     }
 }

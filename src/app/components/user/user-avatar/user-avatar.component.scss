@@ -1,6 +1,7 @@
+@import '../../../../resize.scss';
 .user-avatar {
-    width: 57px;
-    height: 57px;
+    width: desktop(57);
+    height: desktop(57);
     border-radius: 50%;
 }
 

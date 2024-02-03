@@ -1,14 +1,20 @@
+@import '../../../resize.scss';
 .timesheets {
-    width: calc(100vw - 267px);
+    width: calc(100vw - desktop(275));
+    margin-top: desktop(20);
+    height: 100vh;
+    background-color: #F9F9F9;
+    border-radius: desktop(18);
+    padding: desktop(40) desktop(50);
 
     &--info {
-        margin-top: 40px;
+        margin-top: desktop(40);
 
         &__date {
-            font-size: 18px;
+            font-size: desktop(18);
             color: #000;
             font-weight: 400;
-            margin: 5px 10px;
+            margin: desktop(5) desktop(10);
         }
 
         &__label {
@@ -17,16 +23,16 @@
             align-items: center;
 
             .info-time-progress-bar {
-                margin-right: 10px;
-                width: 188px;
-                height: 3px;
-                border-radius: 10px;
+                margin-right: desktop(10);
+                width: desktop(188);
+                height: desktop(3);
+                border-radius: desktop(10);
                 background: #DFDFDF;
 
                 .info-time-progress-line {
-                    width: 160px;
-                    height: 3px;
-                    border-radius: 10px;
+                    width: desktop(160);
+                    height: desktop(3);
+                    border-radius: desktop(10);
                     background: #FABB18;
                 }
             }
@@ -35,6 +41,6 @@
     &--info-data {
         display: flex;
         flex-direction: column;
-        gap: 7px;
+        gap: desktop(7);
     }
 }

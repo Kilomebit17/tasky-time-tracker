@@ -1,5 +1,5 @@
 export interface TimeSheetsEmitData {
-    task:string;
-    startTime:Date,
-    endTime:Date
+    taskTitle:string;
+    timeStart:Date,
+    timeEnd:Date
 }

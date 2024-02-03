@@ -1,40 +1,41 @@
+@import '../../../resize.scss';
 .projects-list {
     color: #000;
-    font-size: 28px;
+    font-size: desktop(28);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    padding: 34px 35px;
-    border-radius: 34px;
+    padding: desktop(34) desktop(35);
+    border-radius: desktop(34);
     background: #FFF;
-    box-shadow: 0px 16px 31px 0px rgba(0, 0, 0, 0.01);
+    box-shadow: desktop(0) desktop(16) desktop(31) desktop(0) rgba(0, 0, 0, 0.01);
     .title {
         color: #000;
-        font-size: 28px;
+        font-size: desktop(28);
         font-style: normal;
         font-weight: 500;
         line-height: normal;
     }
 
     .projects-data {
-        margin-top: 28px;
+        margin-top: desktop(28);
         .project {
-            margin: 10px 0;
-            border-radius: 14px;
-            border: 1px solid #F1F1F1;
+            margin: desktop(10) desktop(0);
+            border-radius: desktop(14);
+            border: desktop(1) solid #F1F1F1;
             background: rgba(255, 255, 255, 0.00);
-            padding: 15px 17px 15px 19px;
+            padding: desktop(15) desktop(17) desktop(15) desktop(19);
             display: flex;
             justify-content: space-between;
             align-items: center;
             .project-name {
                 display: flex;
                 align-items: center;
-                gap: 12px;
+                gap: desktop(12);
                 .project-title {
                     color: #000;
                     text-align: right;
-                    font-size: 16px;
+                    font-size: desktop(16);
                     font-style: normal;
                     font-weight: 600;
                     line-height: normal;
@@ -44,30 +45,30 @@
             .project-info {
                 display: flex;
                 align-items: center;
-                gap: 23px;
+                gap: desktop(23);
 
                 .project-time {
-                    border-radius: 10px;
+                    border-radius: desktop(10);
                     background: #FFF8E8;
                     color: #000;
                     text-align: right;
-                    font-size: 14px;
-                    padding: 10px 20px;
+                    font-size: desktop(14);
+                    padding: desktop(10) desktop(20);
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
                 }
 
                 .project-progress-bar {
-                    width: 188px;
-                    height: 3px;
-                    border-radius: 10px;
+                    width: desktop(188);
+                    height: desktop(3);
+                    border-radius: desktop(10);
                     background: #DFDFDF;
 
                     .project-progress-line {
-                        width: 160px;
-                        height: 3px;
-                        border-radius: 10px;
+                        width: desktop(160);
+                        height: desktop(3);
+                        border-radius: desktop(10);
                         background: #FABB18;
                     }
                 }

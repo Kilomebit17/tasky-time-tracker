@@ -1,12 +1,16 @@
+@import '../../../resize.scss';
 .timesheets-timer {
     &--task {
         position: relative;
+        width: 90%;
 
         input {
             color: #626262;
-            font-size: 20px;
+            font-size: desktop(20);
             border: none;
             outline: none;
+            background: none;
+            width: 100%;
         }
 
         &::before {
@@ -16,17 +20,17 @@
             top: 50%;
             transform: translateY(-50%);
 
-            height: 34px;
-            width: 3px;
+            height: desktop(34);
+            width: desktop(3);
             background-color: #FABB18;
-            border-radius: 6px;
+            border-radius: desktop(6);
         }
 
         &__error {
             color: rgb(207, 2, 2);
-            font-size: 14px;
+            font-size: desktop(14);
             font-weight: 500;
-            transform: translateY(5px);
+            transform: translateY(desktop(5));
         }
     }
 
@@ -40,12 +44,12 @@
     &--time {
         display: flex;
         align-items: center;
-        gap: 22px;
+        gap: desktop(22);
     }
 
     &--info {
         color: #888888;
-        font-size: 20px;
+        font-size: desktop(20);
         font-weight: 500;
     }
 

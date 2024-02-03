@@ -1,27 +1,28 @@
+@import '../../../resize.scss';
 .timesheets-info {
-    border: 1px solid #F1F1F1;
-    border-radius: 14px;
+    border: desktop(1) solid #F1F1F1;
+    border-radius: desktop(14);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 17px 15px 19px;
+    padding: desktop(15) desktop(17) desktop(15) desktop(19);
 
     &::before {
         content: '';
         position: absolute;
-        left: 10px;
+        left: desktop(10);
         top: 50%;
         transform: translateY(-50%);
 
-        height: 34px;
-        width: 3px;
+        height: desktop(34);
+        width: desktop(3);
         background-color: #FABB18;
-        border-radius: 6px;
+        border-radius: desktop(6);
     }
 
     .info-title {
-        font-size: 18px;
+        font-size: desktop(18);
         color: #000;
         font-weight: 400;
     }
@@ -29,13 +30,13 @@
     .info-info {
         display: flex;
         align-items: center;
-        gap: 40px;
+        gap: desktop(40);
 
         .info-time {
             background-color: #FFF8E8;
-            padding: 10px 18px;
-            border-radius: 10px;
-            font-size: 16px;
+            padding: desktop(10) desktop(18);
+            border-radius: desktop(10);
+            font-size: desktop(16);
             color: #000;
             font-weight: 400;
         }

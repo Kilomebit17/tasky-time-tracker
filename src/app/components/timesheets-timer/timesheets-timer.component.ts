@@ -23,9 +23,9 @@ export class TimesheetsTimerComponent {
   private subscription: Subscription = new Subscription()
   @Output() emitter = new EventEmitter<TimeSheetsEmitData>()
   private emitData: TimeSheetsEmitData = {
-    task: '',
-    startTime: new Date(),
-    endTime: new Date(),
+    taskTitle: '',
+    timeStart: new Date(),
+    timeEnd: new Date(),
   }
 
   public handleTimerEvent() {
@@ -47,7 +47,7 @@ export class TimesheetsTimerComponent {
     this.isError = false;
   }
   private startTimer() {
-    this.emitData.startTime = new Date();
+    this.emitData.timeStart = new Date();
     this.subscription = interval(1000).subscribe((value) => {
       this.updateTime();
     });
@@ -74,8 +74,8 @@ export class TimesheetsTimerComponent {
 
       this.emitData = {
         ...this.emitData,
-        endTime: new Date(),
-        task: this.task
+        timeEnd: new Date(),
+        taskTitle: this.task
       }
       this.task = '';
       this.emitter.emit(this.emitData);

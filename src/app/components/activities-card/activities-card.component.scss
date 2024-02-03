@@ -1,13 +1,14 @@
+@import '../../../resize.scss';
 .activities-card {
-    border-radius: 34px;
+    border-radius: desktop(34);
     background: #FFF;
     box-shadow: 0px 16px 31px 0px rgba(0, 0, 0, 0.01);
-    padding: 34px 36px;
-    width: 470px;
+    padding: desktop(34) desktop(36);
+    width: desktop(470);
 
     &--title {
         color: #000;
-        font-size: 28px;
+        font-size: desktop(28);
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -17,14 +18,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 45px;
+        margin-top: desktop(45);
     }
 
     &--info-data {
         color: #000;
-        font-size: 44px;
+        font-size: desktop(44);
         font-style: normal;
-        font-weight: 600;
+        font-weight: 400;
+        opacity: .9;
         line-height: normal;
     }
 

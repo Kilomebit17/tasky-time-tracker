@@ -1,0 +1,24 @@
+@use 'sass:math' as math;
+$mobile-width: 375;
+$tablet-width: 768;
+$desktop-width: 1920;
+
+@function vw($px, $device-width) {
+    $result: math.div($px, $device-width) * 100vw;
+    @return $result;
+}
+
+@function desktop($px) {
+    $result: vw($px, $desktop-width);
+    @return $result;
+}
+
+@function mobile($px) {
+    $result: vw($px, $mobile-width);
+    @return $result;
+}
+
+@function tablet($px) {
+    $result: vw($px, $tablet-width);
+    @return $result;
+}
