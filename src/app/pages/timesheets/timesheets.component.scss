@@ -1,46 +1,46 @@
-@import '../../../resize.scss';
+@import "../../../resize.scss";
 .timesheets {
-    width: calc(100vw - desktop(275));
-    margin-top: desktop(20);
-    height: 100vh;
-    background-color: #F9F9F9;
-    border-radius: desktop(18);
-    padding: desktop(40) desktop(50);
+  width: calc(100vw - desktop(275));
+  margin-top: desktop(20);
+  height: calc(100vh - desktop(135));
+  background-color: #f9f9f9;
+  border-radius: desktop(18);
+  padding: desktop(40) desktop(50);
 
-    &--info {
-        margin-top: desktop(40);
+  &--info {
+    margin-top: desktop(40);
 
-        &__date {
-            font-size: desktop(18);
-            color: #000;
-            font-weight: 400;
-            margin: desktop(5) desktop(10);
-        }
-
-        &__label {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .info-time-progress-bar {
-                margin-right: desktop(10);
-                width: desktop(188);
-                height: desktop(3);
-                border-radius: desktop(10);
-                background: #DFDFDF;
-
-                .info-time-progress-line {
-                    width: desktop(160);
-                    height: desktop(3);
-                    border-radius: desktop(10);
-                    background: #FABB18;
-                }
-            }
-        }
+    &__date {
+      font-size: desktop(18);
+      color: #000;
+      font-weight: 400;
+      margin: desktop(5) desktop(10);
     }
-    &--info-data {
-        display: flex;
-        flex-direction: column;
-        gap: desktop(7);
+
+    &__label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .info-time-progress-bar {
+        margin-right: desktop(10);
+        width: desktop(188);
+        height: desktop(3);
+        border-radius: desktop(10);
+        background: #dfdfdf;
+
+        .info-time-progress-line {
+          width: desktop(160);
+          height: desktop(3);
+          border-radius: desktop(10);
+          background: #fabb18;
+        }
+      }
     }
+  }
+  &--info-data {
+    display: flex;
+    flex-direction: column;
+    gap: desktop(7);
+  }
 }
